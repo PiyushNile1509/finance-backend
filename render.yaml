@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: finance-backend
+    runtime: java
+    buildCommand: mvn clean install -DskipTests
+    startCommand: java -jar target/finance-backend-1.0.0.jar
+    envVars:
+      - key: JWT_SECRET
+        value: 5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437
